@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item app:showAsAction="never" android:title="Saludar" android:id="@+id/MenuItemMainSaludar" />
+    <item app:showAsAction="never" android:title="Ir a" android:id="@+id/MenuItemMainIrA" />
+    <item app:showAsAction="never" android:title="Acerca de" android:id="@+id/MenuItemMainAcercaDe" />
+
+</menu>
