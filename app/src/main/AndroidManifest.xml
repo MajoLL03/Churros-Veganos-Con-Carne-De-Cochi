@@ -10,9 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChurrosVeganosConCarneDeCochi">
         <activity
-            android:parentActivityName=".ActionBarMenuIconsActivity"
+            android:name=".ImplicitIntentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TableLayoutCredentialActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ActionBarMenuIconsActivity" />
         <activity
             android:name=".ActionBarMenuIconsActivity"
             android:exported="true">
