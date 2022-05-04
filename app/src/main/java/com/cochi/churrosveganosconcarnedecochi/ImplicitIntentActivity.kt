@@ -16,6 +16,37 @@ class ImplicitIntentActivity : AppCompatActivity() {
 
         agregarAccionAlBotonWeb()
         agregarAccionAlBotonEmail()
+        agregarAccionAlBotonPhone()
+        agregarAccionAlBotonCamera()
+    }
+
+    private fun agregarAccionAlBotonCamera() {
+        // obtener el enlace al boton camera
+        val botonCamera = findViewById<ImageButton>(R.id.imageButtonCamera)
+        // asignar la acción al botón
+        botonCamera.setOnClickListener {
+            // definir el intent para llamar la camara
+            // val intentCamera = Intent(android.media.)
+        }
+    }
+
+    private fun agregarAccionAlBotonPhone() {
+        // obtener el enlace al boton phone
+        val botonPhone = findViewById<ImageButton>(R.id.imageButtonPhone)
+        // asignar la accion al botonPhone para que intente llamar al teléfono
+        botonPhone.setOnClickListener {
+            // obtener el número telefónico de la caja de texto
+            val telefono = findViewById<EditText>(R.id.editTextPhone).text
+            // validar que el número telefónico haya sido ingresado
+            // de lo contrario enviar mensaje de cochi
+            if (telefono.isEmpty()) {
+                Toast.makeText(this, "No te hagas cochi, ingresa el teléfono", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                val intentPhone = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$telefono"))
+                    startActivity(intentPhone)
+                }
+        }
     }
 
     private fun agregarAccionAlBotonEmail() {
