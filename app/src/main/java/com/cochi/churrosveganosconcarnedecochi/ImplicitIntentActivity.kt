@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -18,6 +19,9 @@ class ImplicitIntentActivity : AppCompatActivity() {
         agregarAccionAlBotonEmail()
         agregarAccionAlBotonPhone()
         agregarAccionAlBotonCamera()
+
+        // agregar soporte para que muestre el icono en la barra de accion
+        supportActionBar!!.setIcon(R.mipmap.ic_launcher)
     }
 
     private fun agregarAccionAlBotonCamera() {
@@ -26,7 +30,9 @@ class ImplicitIntentActivity : AppCompatActivity() {
         // asignar la acción al botón
         botonCamera.setOnClickListener {
             // definir el intent para llamar la camara
-            // val intentCamera = Intent(android.media.)
+            val intentCamera = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            // ejecutar el intent
+            startActivity(intentCamera)
         }
     }
 
