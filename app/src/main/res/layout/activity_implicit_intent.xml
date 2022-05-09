@@ -64,11 +64,11 @@
         app:srcCompat="@drawable/ic_camera" />
 
     <Button
-        android:id="@+id/buttonContactMe"
+        android:id="@+id/buttonSms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="191dp"
-        android:text="contactame"
+        android:text="Enviar sms"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/buttonEmailMe" />
 
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        android:text="Escribeme"
-        app:layout_constraintBottom_toTopOf="@+id/buttonContactMe"
+        android:text="enviar correo"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSms"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
